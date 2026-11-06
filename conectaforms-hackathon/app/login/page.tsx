@@ -43,7 +43,7 @@ export default function Login() {
       <div className="absolute w-90 h-90 rounded-full border-[65px] border-[#d1dec9] -right-25 -top-10"/>
     </div>
     <div className="flex flex-col bg-[#faf7f0] px-5 py-8 sm:px-12">
-      <div className="flex justify-between items-center"><Link className="button-ghost !pl-0 flex gap-2 items-center" href="/"><ArrowLeft size={16}/> Voltar</Link><span className="flex gap-2 text-[#45705b] items-center text-xs font-bold"><Layers3 size={17}/> CONECTAFORMS</span></div>
+      <div className="flex justify-between items-center"><Link className="button-ghost !pl-0 flex gap-2 items-center" href="/"><ArrowLeft size={16}/> Voltar</Link><span className="flex gap-2 text-[#45705b] items-center text-xs font-bold"><Layers3 size={17}/> Mimo Data</span></div>
       <div className="w-full max-w-[420px] mx-auto my-auto py-16">
         <div className="bg-[#e5f0e3] h-13 w-13 flex items-center justify-center rounded-2xl text-[#2c754d] mb-7"><LockKeyhole size={24}/></div>
         <h1 className="display text-5xl text-[#264530]">{mode === 'login' ? 'Que bom te ver!' : 'Comece por aqui.'}</h1>

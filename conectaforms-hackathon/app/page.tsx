@@ -56,6 +56,6 @@ export default function Home() {
       </section>
       <section className="site-shell py-18 flex flex-col sm:flex-row items-center gap-7 justify-between"><div className="max-w-xl"><div className="kicker">PROTÓTIPO DO HACKATHON</div><h2 className="display text-4xl mt-3">A Senhora Cookies foi só o começo.</h2><p className="text-[#6b766b] mt-3 leading-relaxed">O mesmo sistema atende diferentes mercados com formulários personalizados.</p></div><Link href="/demo" className="button-primary">Ver exemplo funcionando <HeartHandshake size={18}/></Link></section>
     </main>
-    <footer className="border-t border-[#e1e7de] py-8 text-sm text-[#7a8378] text-center">ConectaForms · Protótipo acadêmico para o Hackathon UniSenac · 2026</footer>
+    <footer className="border-t border-[#e1e7de] py-8 text-sm text-[#7a8378] text-center">Mimo Data · Protótipo acadêmico para o Hackathon UniSenac · 2026</footer>
   </>;
 }

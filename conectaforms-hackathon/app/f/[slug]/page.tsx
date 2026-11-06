@@ -11,5 +11,5 @@ export default async function PublicPage({params}:{params:Promise<{slug:string}>
   const {data} = await supabasePublic().from('forms').select('id,title,brand_name,description,theme,fields').eq('slug',slug).eq('published',true).maybeSingle();
   if(!data) notFound();
   const form = data as FormRecord;
-  return <main className="py-8 sm:py-12 px-4"><div className="max-w-[980px] mx-auto"><PublicForm form={form}/><div className="text-center text-xs text-[#8f9b8e] mt-7">Formulário criado com ConectaForms</div></div></main>;
+  return <main className="py-8 sm:py-12 px-4"><div className="max-w-[980px] mx-auto"><PublicForm form={form}/><div className="text-center text-xs text-[#8f9b8e] mt-7">Formulário criado com Mimo Data</div></div></main>;
 }
