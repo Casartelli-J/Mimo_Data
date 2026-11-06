@@ -55,6 +55,7 @@ npm run dev
 - Vários negócios por conta; cada negócio cria seus próprios formulários.
 - Editor de formulários com perguntas de **texto**, **telefone** e **seleção**, campos obrigatórios e temas de cores.
 - Fluxo **rascunho → publicado** e link público `/f/slug-do-formulario`.
+- **QR Code exclusivo para cada formulário publicado**, gerado no painel, com botões para baixar imagem PNG e copiar o link. A demonstração da Senhora Cookies também exibe um QR de exemplo.
 - API própria (Next.js Route Handlers / Vercel Functions) para gravar respostas, criar empresas, criar/editar formulários, listar formulários e excluir respostas.
 - Painel privado de respostas e exportação de até 200 respostas por formulário em CSV.
 - Modelo PostgreSQL com **Row Level Security (RLS)** que restringe dados de empresas e respostas ao respectivo proprietário.
@@ -64,7 +65,7 @@ npm run dev
 
 ## Tecnologias
 
-Next.js 15.5.29 (App Router), React 19, TypeScript, Tailwind CSS 3.4.17, Supabase (Auth + PostgreSQL/RLS), Zod, Vercel Functions.
+Next.js 15.5.29 (App Router), React 19, TypeScript, Tailwind CSS 3.4.17, Supabase (Auth + PostgreSQL/RLS), Zod, Vercel Functions e `qrcode.react` 4.2.0.
 
 ## 1. Requisitos
 
@@ -116,9 +117,33 @@ Abra `http://localhost:3000`. Para uma prévia imediata sem instalar dependênci
 2. Crie o negócio **Senhora Cookies** em `/dashboard`.
 3. Crie um formulário em `/dashboard/empresa/ID`. O sistema sugere campos de nome, sobrenome, telefone e sabor quando o nome da empresa contém *cookie*.
 4. Abra o formulário criado; marque **Publicar formulário** e **Salvar alterações**.
-5. Clique em **Abrir**, preencha o formulário público e envie.
-6. Volte ao painel do formulário e veja a resposta; experimente **Exportar CSV**.
-7. Cadastre um segundo negócio para verificar que os formulários e respostas ficam separados.
+5. Na página do formulário publicado, encontre o painel **Compartilhar por QR Code**: baixe o PNG, copie o link e abra o QR a partir de um segundo aparelho (use a versão publicada, pois `localhost` só funciona no próprio computador).
+6. Clique em **Abrir**, preencha o formulário público e envie.
+7. Volte ao painel do formulário e veja a resposta; experimente **Exportar CSV**.
+8. Cadastre um segundo negócio para verificar que os formulários e respostas ficam separados.
+
+## NOVO: Compartilhamento de formulários por QR Code
+
+- No painel de cada formulário, **publique e salve** o formulário. O QR Code é exibido automaticamente em **Compartilhar por QR Code**. Enquanto estiver como rascunho, o QR não aparece.
+- Clique em **Baixar PNG** para imprimir/colocar em embalagens, ou em **Copiar link** para compartilhar digitalmente.
+- O QR aponta para a URL pública exata do formulário e é criado inteiramente no navegador com `qrcode.react`; não utiliza serviço externo de QR nem exige novas tabelas no Supabase.
+- **Importante:** o QR sempre usa o endereço em que o painel está aberto. `http://localhost:3000` não funciona em outros dispositivos; faça login pelo domínio definitivo do site na **Vercel** e baixe o código por lá.
+- Se você **trocar o domínio** depois de imprimir os códigos, gere novos QR Codes no novo domínio ou configure redirecionamento do domínio anterior. Um PNG antigo não muda sozinho.
+- Em `/demo`, a área "Painel da empresa" exibe um QR ilustrativo que aponta para `/demo` (não registra dados reais).
+
+### Instalação sobre uma versão já funcionando
+
+Faça backup do projeto e do `.env.local`. Baixe o pacote completo ou o ZIP de atualização do QR Code. O ZIP de atualização contém apenas os arquivos que mudaram (consulte `ATUALIZACAO_QRCODE.md`). Não substitua seu `.env.local`, não execute o SQL outra vez e não apague os dados do Supabase.
+
+No terminal, dentro da pasta correta:
+
+```bash
+npm install
+npm run check
+npm run dev
+```
+
+**Se já publicou na Vercel:** envie as mudanças para o mesmo repositório GitHub e aguarde o deploy. Nenhuma variável nova é necessária. Teste usando o link público depois da publicação.
 
 ## 4. Publicar na Vercel
 

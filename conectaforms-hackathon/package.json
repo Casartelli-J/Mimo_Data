@@ -1,6 +1,6 @@
 {
   "name": "conectaforms-hackathon",
-  "version": "1.0.1-node20",
+  "version": "1.1.0-node20-qr",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -16,7 +16,8 @@
     "next": "15.5.29",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "zod": "^4.1.0"
+    "zod": "^4.1.0",
+    "qrcode.react": "4.2.0"
   },
   "devDependencies": {
     "@types/node": "^20.18.0",

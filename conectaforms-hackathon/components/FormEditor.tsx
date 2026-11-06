@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
-import { ClipboardCopy, ExternalLink, Plus, Save, Trash2 } from 'lucide-react';
+import { ClipboardCopy, ExternalLink, Plus, QrCode, Save, Trash2 } from 'lucide-react';
 import Link from 'next/link';
 import type { FormField, FormRecord, FieldType, Theme } from '@/lib/types';
 import { cookieFields } from '@/lib/types';
@@ -71,7 +71,7 @@ export function FormEditor({businessId, businessName, initial}: {businessId:stri
     {initial && <div className="flex items-start gap-3 border-t border-[#e8eee6] pt-5"><input className="accent-[#357452] mt-1" id="publish" type="checkbox" checked={published} onChange={e=>setPublished(e.target.checked)}/><div><label className="font-bold text-sm cursor-pointer" htmlFor="publish">Publicar formulário</label><p className="helper">Quando ativado e salvo, qualquer pessoa com o link pode responder.</p></div></div>}
     {error && <p className="alert-error" role="alert">{error}</p>}{success && <p className="alert-success" role="status">{success}</p>}
     <button className="button-primary w-full" disabled={busy} type="submit"><Save size={17}/>{busy?'Salvando...':initial?'Salvar alterações':'Criar formulário'}</button>
-    {initial?.published && <div className="flex flex-wrap gap-2"><button className="button-secondary !text-sm flex-1" type="button" onClick={copyUrl}><ClipboardCopy size={16}/> Copiar link</button><Link target="_blank" href={`/f/${initial.slug}`} className="button-secondary !text-sm flex-1"><ExternalLink size={16}/> Abrir</Link></div>}
+    {initial?.published && <div className="flex flex-wrap gap-2"><button className="button-secondary !text-sm flex-1" type="button" onClick={copyUrl}><ClipboardCopy size={16}/> Copiar link</button><Link target="_blank" href={`/f/${initial.slug}`} className="button-secondary !text-sm flex-1"><ExternalLink size={16}/> Abrir</Link><a href="#compartilhar-formulario" className="button-secondary !text-sm flex-1"><QrCode size={16}/> QR Code</a></div>}
     <p className="helper">Campos coletados somente para as finalidades informadas. O uso promocional exige autorização separada do cliente.</p>
   </form>;
 }
