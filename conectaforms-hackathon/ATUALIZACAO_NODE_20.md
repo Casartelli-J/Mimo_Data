@@ -1,4 +1,4 @@
-# Atualização do ConectaForms para Node.js 20.18
+# Atualização do Mimo Data para Node.js 20.18
 
 Este pacote é uma adaptação do projeto anterior. Você **não precisa atualizar o Node.js do computador**.
 
@@ -11,8 +11,8 @@ Este pacote é uma adaptação do projeto anterior. Você **não precisa atualiz
 ## Como substituir a versão antiga no Windows
 
 1. Pare o servidor (`Ctrl+C` no terminal do VS Code).
-2. Renomeie a pasta atual de `conectaforms-hackathon` para `conectaforms-backup`.
-3. Extraia o novo ZIP na mesma pasta; abra `conectaforms-hackathon` no VS Code.
+2. Renomeie a pasta atual de `mimo-data` para `mimo-data-backup`.
+3. Extraia o novo ZIP na mesma pasta; abra `mimo-data` no VS Code.
 4. Se já havia configurado o Supabase, copie apenas o `.env.local` da pasta de backup para a pasta nova.
 5. No novo terminal, execute:
 

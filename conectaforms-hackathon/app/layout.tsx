@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'ConectaForms | Seus clientes, mais perto',
+  title: 'Mimo Data | Seus clientes, mais perto',
   description: 'Formulários personalizados e organização de contatos para pequenos negócios.',
 };
 

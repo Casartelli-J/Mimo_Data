@@ -37,13 +37,13 @@ export default function Login() {
 
   return <div className="min-h-screen grid lg:grid-cols-2">
     <div className="bg-[#e7eddf] hidden lg:flex p-16 flex-col justify-between relative overflow-hidden">
-      <Link href="/" className="brand text-3xl text-[#24553c]">conecta<span className="text-[#c17b4b]">forms</span></Link>
+      <Link href="/" className="brand text-3xl text-[#24553c]">Mimo<span className="text-[#c17b4b]"> Data</span></Link>
       <div className="relative z-10"><div className="text-[#2b7c54] font-bold text-xs tracking-[.19em] mb-4">MAIS CONEXÃO, MENOS COMPLICAÇÃO</div><h1 className="display text-6xl leading-tight text-[#234c36] max-w-lg">Cada cliente tem uma história. Comece ouvindo.</h1><p className="text-lg text-[#587361] max-w-md mt-5">Centralize os dados importantes e fortaleça o relacionamento com quem escolhe seu negócio.</p></div>
       <div className="text-[#64806d] text-sm">Hackathon de Empreendedorismo · UniSenac</div>
       <div className="absolute w-90 h-90 rounded-full border-[65px] border-[#d1dec9] -right-25 -top-10"/>
     </div>
     <div className="flex flex-col bg-[#faf7f0] px-5 py-8 sm:px-12">
-      <div className="flex justify-between items-center"><Link className="button-ghost !pl-0 flex gap-2 items-center" href="/"><ArrowLeft size={16}/> Voltar</Link><span className="flex gap-2 text-[#45705b] items-center text-xs font-bold"><Layers3 size={17}/> Mimo Data</span></div>
+      <div className="flex justify-between items-center"><Link className="button-ghost !pl-0 flex gap-2 items-center" href="/"><ArrowLeft size={16}/> Voltar</Link><span className="flex gap-2 text-[#45705b] items-center text-xs font-bold"><Layers3 size={17}/> MIMO DATA</span></div>
       <div className="w-full max-w-[420px] mx-auto my-auto py-16">
         <div className="bg-[#e5f0e3] h-13 w-13 flex items-center justify-center rounded-2xl text-[#2c754d] mb-7"><LockKeyhole size={24}/></div>
         <h1 className="display text-5xl text-[#264530]">{mode === 'login' ? 'Que bom te ver!' : 'Comece por aqui.'}</h1>

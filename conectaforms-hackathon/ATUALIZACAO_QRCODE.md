@@ -1,6 +1,6 @@
 # Atualização: QR Code para compartilhar formulários
 
-Este pacote parte da versão do ConectaForms que funciona em **Node.js 20.18**, com Next.js 15 e Tailwind 3. A atualização não exige mudanças nas tabelas do Supabase.
+Este pacote parte da versão do Mimo Data que funciona em **Node.js 20.18**, com Next.js 15 e Tailwind 3. A atualização não exige mudanças nas tabelas do Supabase.
 
 ## Novidades
 
@@ -17,7 +17,7 @@ Este pacote parte da versão do ConectaForms que funciona em **Node.js 20.18**, 
 
 1. **Faça backup da sua pasta** e, se usa Git, faça um commit antes de atualizar.
 2. Pare o Next.js no terminal com `Ctrl+C`.
-3. Extraia o `conectaforms-atualizacao-qrcode.zip` **dentro da pasta do projeto**, aceitando a substituição dos arquivos com o mesmo nome.
+3. O QR Code já faz parte do pacote `mimo-data-completo.zip`. Para usar o projeto completo, extraia o arquivo. Se estiver aplicando somente a renomeação, o pacote `mimo-data-atualizacao-marca.zip` contém apenas arquivos de marca, não a implementação integral do QR Code.
 4. Seu arquivo `.env.local` será preservado: ele **não é incluído no ZIP de atualização**.
 5. No terminal da pasta do projeto, rode:
 
@@ -32,7 +32,7 @@ Este pacote parte da versão do ConectaForms que funciona em **Node.js 20.18**, 
 
 ### Opção B: projeto completo
 
-Se estiver começando do zero, extraia `conectaforms-completo-com-qrcode.zip` e execute o README normalmente. Se já tem Supabase funcionando, copie o **seu próprio** `.env.local` para a nova pasta, sem compartilhar as chaves.
+Se estiver começando do zero, extraia `mimo-data-completo.zip` e siga o README. Se já tem Supabase funcionando, mantenha o **seu próprio** `.env.local`, sem compartilhar as chaves.
 
 ## Muito importante: endereço do QR
 

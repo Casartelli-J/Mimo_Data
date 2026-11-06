@@ -1,8 +1,8 @@
-# ConectaForms — Hackathon UniSenac 2026
+# Mimo Data — Hackathon UniSenac 2026
 
-Plataforma multissetorial de **formulários personalizáveis** para micro e pequenos negócios, com exemplo da **Senhora Cookies**. O nome “ConectaForms” é provisório e pode ser substituído.
+Plataforma multissetorial de **formulários personalizáveis** para micro e pequenos negócios, com exemplo da **Senhora Cookies**. Identidade do produto: **Mimo Data**.
 
-## ATUALIZAÇÃO PARA NODE.JS 20.18 (LEIA SE JÁ INSTALOU A VERSÃO ANTERIOR)
+## COMPATIBILIDADE COM NODE.JS 20.18
 
 Esta edição corrige o erro `require() of ES Module ... magic-string ... @tailwindcss/node`, que vinha da instalação do Tailwind 4, e também troca Next.js 16 por Next.js 15 para usar a integração de middleware tradicional. **Seu Windows pode continuar com Node.js 20.18.0; não precisa atualizar o Node.**
 
@@ -17,7 +17,7 @@ Esta edição corrige o erro `require() of ES Module ... magic-string ... @tailw
 
 ### Procedimento no Windows / VS Code
 
-**Mais seguro (recomendado):** renomeie sua pasta antiga para `conectaforms-backup`, extraia o novo ZIP na pasta `Mimo_Data`, e copie **somente o seu `.env.local` antigo** para a nova pasta `conectaforms-hackathon` (se já estiver configurado). O banco Supabase e o SQL permanecem os mesmos; **não precisa executar o SQL novamente**.
+**Para migrar uma instalação existente:** faça backup da pasta que funciona hoje e de seu `.env.local`. Extraia `mimo-data-completo.zip`, abra a pasta `mimo-data` e copie **somente o seu `.env.local`** para ela. Se tiver código personalizado, compare e mescle as alterações antes de substituir arquivos. O banco Supabase e as URLs dos formulários existentes permanecem os mesmos; **não execute o SQL novamente**. Para uma atualização menor, use `mimo-data-atualizacao-marca.zip`, aplicando os arquivos diretamente à raiz do projeto atual.
 
 Abra a nova pasta no VS Code, vá a **Terminal → Novo Terminal** (PowerShell) e execute:
 
@@ -133,7 +133,7 @@ Abra `http://localhost:3000`. Para uma prévia imediata sem instalar dependênci
 
 ### Instalação sobre uma versão já funcionando
 
-Faça backup do projeto e do `.env.local`. Baixe o pacote completo ou o ZIP de atualização do QR Code. O ZIP de atualização contém apenas os arquivos que mudaram (consulte `ATUALIZACAO_QRCODE.md`). Não substitua seu `.env.local`, não execute o SQL outra vez e não apague os dados do Supabase.
+Faça backup do projeto e do `.env.local`. Use o pacote completo `mimo-data-completo.zip` para nova instalação ou `mimo-data-atualizacao-marca.zip` para aplicar somente a troca de marca no projeto que já funciona. **Não substitua seu `.env.local`, não execute o SQL outra vez e não apague os dados do Supabase.** Consulte `RENOMEACAO_MIMO_DATA.md` para detalhes.
 
 No terminal, dentro da pasta correta:
 
